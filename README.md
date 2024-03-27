@@ -30,6 +30,14 @@ for example:
 ./pcap2csv dataset/Stage0/SAT-03-11-2018_0.pcap dataset/Stage0/SAT-03-11-2018_0.csv
 ```
 
+In Stage0, you can simply generate all the csv files by:
+
+```bash
+cd dataset/Stage0
+g++ gen_all_csv.cpp -o gen_all_csv -O2
+./gen_all_csv
+```
+
 The features (.csv files) will contain several column, each describes a feature. Current `pcpc2csv` will generate the following features: 
 
 - `Flow ID, Source IP, Source Port, Destination IP, Destination Port, Protocol`: subset of the quintuple describing the identifier of the flow.

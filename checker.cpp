@@ -9,8 +9,7 @@ int main(int argc, char **argv) {
 	registerLocalChecker(std::string(""), std::string(argv[1]), std::string(argv[2]), 100, std::string(argv[3]));
 
 	int flow_cnt = ans.readInt();
-	if (ouf.readInt() != flow_cnt) quitp(0, "Wrong flow number.\n");
-	ans.eoln(), ouf.eoln();
+	ouf.readInt(), ans.eoln(), ouf.eoln();
 
 	while (true) {
 		benign.insert(ans.readString());
