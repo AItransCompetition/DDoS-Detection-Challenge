@@ -6,6 +6,4 @@ This task expects the contestant to consider the dataset generated on the first 
 
 #### Format of train_labels.txt
 
-The first line indicates the number of flows. Each flow is represented by a quintuple: {Source IP}-{Destination IP}-{Source Port}-{Destination Port}-{Protocol}.
-
-The submitted file's format should be the same.
+The first line indicates the number of flows. Each flow is represented by a quintuple: {Source IP}-{Destination IP}-{Source Port}-{Destination Port}-{Protocol}. The submitted file's format should be the same.

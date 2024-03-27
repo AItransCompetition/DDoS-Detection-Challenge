@@ -1,8 +1,6 @@
 # DDoS-Detection-Challenge
 
-This repository contains the DDoS-datasets for each stage, a reference format for the prediction labels to be submitted, judge script, and a few simple runnable sample programs.
-
-
+This repository contains the DDoS-datasets for each stage, a reference format for the prediction labels to be submitted and judge script.
 
 ### Judge script
 
