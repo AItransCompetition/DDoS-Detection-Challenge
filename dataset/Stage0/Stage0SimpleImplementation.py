@@ -1,7 +1,7 @@
 import polars as pl
 def load_pkts(filepath: str, ids: set, total_pkts: dict, is_benign: dict):
 	print(filepath)
-	data = pl.read_csv(filepath, dtypes={'SimillarHTTP': str}, columns=["Flow ID", " Label"])
+	data = pl.read_csv(filepath, columns=["Flow ID", "Label"])
 	pkts = data.select([
 		pl.col("Flow ID").alias("id"),
 		pl.col("Label").alias("label")
@@ -24,7 +24,7 @@ if __name__ == '__main__':
 	is_benign = {}
 
 	load_pkts("test_dataset/SAT-03-11-2018_0.csv", ids, total_pkts, is_benign)
-	for i in range (1, 146):
+	for i in range (1, 3):
 		load_pkts("test_dataset/SAT-03-11-2018_0{}.csv".format(i), ids, total_pkts, is_benign)
 
 	threshold = 2
