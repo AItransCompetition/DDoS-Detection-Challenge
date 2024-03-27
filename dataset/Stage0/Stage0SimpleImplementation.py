@@ -23,12 +23,12 @@ if __name__ == '__main__':
 	total_pkts = {}
 	is_benign = {}
 
-	load_pkts("test/SAT-03-11-2018_0.csv", ids, total_pkts, is_benign)
+	load_pkts("test_dataset/SAT-03-11-2018_0.csv", ids, total_pkts, is_benign)
 	for i in range (1, 146):
-		load_pkts("test/SAT-03-11-2018_0{}.csv".format(i), ids, total_pkts, is_benign)
+		load_pkts("test_dataset/SAT-03-11-2018_0{}.csv".format(i), ids, total_pkts, is_benign)
 
 	threshold = 2
-	with open("test/test_labels.txt", 'w') as f:
+	with open("test_dataset/test_labels.txt", 'w') as f:
 		f.write("{}\n".format(len(ids)))
 		for id in ids:
 			if total_pkts[id] > threshold:

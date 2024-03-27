@@ -47,7 +47,7 @@ cd dataset/Stage0
 python Stage0SimpleImplementation.py
 ```
 
-The prediction labels will be stored in `dataset/Stage0/test/test_labels.txt` and should be submitted to the judge website.
+The prediction labels will be stored in `dataset/Stage0/test_dataset/test_labels.txt` and should be submitted to the judge website.
 
 ### Judge script
 
