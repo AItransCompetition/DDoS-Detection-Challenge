@@ -103,11 +103,11 @@ int main(int argc, char **argv) {
 		if (protocol == IPPROTO_TCP) {
 			const struct tcphdr *tcp_hdr = reinterpret_cast<const struct tcphdr *>(pkt_data + sizeof(*eth_hdr) + sizeof(*ip_hdr));
 			tcp_window = ntohs(tcp_hdr->th_win), tcp_data_offset = tcp_hdr->th_off;
-			src_port = tcp_hdr->th_sport, dst_port = tcp_hdr->th_dport;
+			src_port = ntohs(tcp_hdr->th_sport), dst_port = ntohs(tcp_hdr->th_dport);
 		} else if (protocol == IPPROTO_UDP) {
 			const struct udphdr *udp_hdr = reinterpret_cast<const struct udphdr *>(pkt_data + sizeof(*eth_hdr) + sizeof(*ip_hdr));
 			udp_len = ntohs(udp_hdr->uh_ulen);
-			src_port = udp_hdr->uh_sport, dst_port = udp_hdr->uh_dport;
+			src_port = ntohs(udp_hdr->uh_sport), dst_port = ntohs(udp_hdr->uh_dport);
 		}
 
 		std::string quintuple = ip2string(src_ip) + "-" + ip2string(dst_ip) + "-" + std::__cxx11::to_string(src_port) + "-" + std::__cxx11::to_string(dst_port) + "-" + std::__cxx11::to_string(protocol);
