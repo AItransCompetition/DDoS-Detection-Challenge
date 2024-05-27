@@ -138,7 +138,7 @@ Therefore, we simplify the real problem and design to obtain the following scori
 1. for each flow, no report or incorrectly prediction will result in a score of 0 for that flow (i.e., all packets in that flow will be considered misclassified).
 2. otherwise, if the total length of the flow is $n$ and the first result are reported correctly during the $k$-th package and the $k+1$-th package, then this flow will receive an $n-k$ score.
 3. However, for flow of length $1$, the above scoring method will always result in a score of $0$, so we allow for some degree of delay. That is, let the $k$-th packet's timestamp be $t_k$ and the inference time be $t_k\le t<t_{k+1}$. If $t\le t_k+t'$, then the $k$-th packet will be considered as the correct classified and thus the flow gets $n-k+1$ points, where $t'$ is our available inference delay, and the value of which is affected by the performance of the test environment. The current default value is 0.2 ms.
-4. Finally the attack and benign flow are each scored using the `F1-score` when some packets are classified correctly (a suffix which may be null or the whole flow of each flow will be classified correctly). 
+4. Finally it's scored using the `F1-score` when some packets of each flow are classified correctly (a suffix which may be null or the whole flow of each flow will be classified correctly). 
 
 ### Submit and Judge Online
 
@@ -178,8 +178,8 @@ The following limitations are subject to change before opening the online submis
    - Ubuntu 22.04
 
    - Python 3.12.3
+   - **NO GPU PROVIDED.**
 
-6. **NO GPU PROVIDED.**
 
 ### Online Environment Configuration
 
