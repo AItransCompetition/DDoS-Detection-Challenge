@@ -91,7 +91,11 @@ final_round/
 
 ```bash
 cd final_round/
-# Download train.pcap and train_labels.txt here
+```
+
+Download [dataset ](https://cloud.tsinghua.edu.cn/d/a46f6a3312cc43698c66/)here.
+
+```bash
 python main.py
 python calc_score.py
 ```
