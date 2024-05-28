@@ -66,7 +66,7 @@ if __name__ == '__main__':
         'pcap_path': './train.pcap',
         'predict_labels': './predict_labels.txt',
         'correct_labels': './train_labels.txt',
-        'available_infer_delay': 200 # us
+        'available_infer_delay': 2000 # us, may be changed before opening the online submission
     }
 
     predict_labels = load_predict_labels(config['predict_labels'])
