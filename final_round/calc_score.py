@@ -37,7 +37,7 @@ def calc_score(predict_labels: dict, benign_flows: set, flow_timestamp: dict, av
         timestamp_list = flow_timestamp[flow_id]
         flow_length = len(timestamp_list)
         
-        if correct_label != predict_label and False:
+        if correct_label != predict_label:
             mtx[predict_label][correct_label] += flow_length
         else:
             mtx[1 - correct_label][correct_label] += flow_length
