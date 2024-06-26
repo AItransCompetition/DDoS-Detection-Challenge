@@ -170,13 +170,13 @@ Submit a compressed package in `.zip` format, which when unzipped will replace t
 
 The following limitations are subject to change before opening the online submission.
 
-1. Length of the submitted code: the size of the submitted `.zip` file must not exceed 10MB, and the size must not exceed 256MB after it is unzipped.
+1. Length of the submitted code: the size of the submitted `.zip` file must not exceed 100MB.
 
-2. Memory: 1024MiB.
+2. Memory: 8 GiB.
 
-3. Runtime: `main.py` must not run for more than 15 minutes. 
+3. Runtime: `main.py` must not run for more than 10 minutes. 
 
-4. Number of submissions: due to resource and evaluation time constraints, only one submission per hour is allowed.
+4. Number of submissions: due to resource and evaluation time constraints, only one submission in 15min is allowed.
 
 5. Test environment:
 
