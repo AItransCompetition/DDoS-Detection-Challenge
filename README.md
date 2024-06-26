@@ -168,8 +168,6 @@ Submit a compressed package in `.zip` format, which when unzipped will replace t
 
 ### Online Submission Restrictions
 
-The following limitations are subject to change before opening the online submission.
-
 1. Length of the submitted code: the size of the submitted `.zip` file must not exceed 100MB.
 
 2. Memory: 8 GiB.
